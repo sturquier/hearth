@@ -1,4 +1,4 @@
-import { CategoryId } from '../value-objects/category-id.vo';
+import { CategoryId } from '@/src/domains/budgeting/domain/value-objects/category-id.vo';
 
 export class Category {
   constructor(
