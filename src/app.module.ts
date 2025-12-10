@@ -8,7 +8,9 @@ import { SharedModule } from './shared/shared.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     SharedModule,
     BudgetingModule,
     MediaModule,

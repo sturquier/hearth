@@ -22,7 +22,6 @@
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/generated-prisma/*": ["generated/prisma/*"],
       "@/src/*": ["src/*"]
     }
   }
