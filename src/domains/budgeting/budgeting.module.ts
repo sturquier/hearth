@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { CreateCategoryUseCase } from './application/use-cases/create-category.uc';
 import { ListCategoriesUseCase } from './application/use-cases/list-categories.uc';
 import { BudgetingController } from './infrastructure/http/budgeting.controller';
 import { CategoryOrmEntity } from './infrastructure/persistence/orm/category.orm-entity';
@@ -13,8 +14,16 @@ import { TypeOrmCategoryRepository } from './infrastructure/persistence/reposito
     TypeOrmCategoryRepository,
     {
       provide: ListCategoriesUseCase,
-      useFactory: (repository: TypeOrmCategoryRepository) =>
-        new ListCategoriesUseCase(repository),
+      useFactory: (
+        repository: TypeOrmCategoryRepository,
+      ): ListCategoriesUseCase => new ListCategoriesUseCase(repository),
+      inject: [TypeOrmCategoryRepository],
+    },
+    {
+      provide: CreateCategoryUseCase,
+      useFactory: (
+        repository: TypeOrmCategoryRepository,
+      ): CreateCategoryUseCase => new CreateCategoryUseCase(repository),
       inject: [TypeOrmCategoryRepository],
     },
   ],

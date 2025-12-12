@@ -2,9 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { Logger } from 'nestjs-pino';
 
 import { AppModule } from './app.module';
+import { setupSwagger } from './shared/infrastructure/api/api.config';
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
+
+  setupSwagger(app);
 
   app.useLogger(app.get(Logger));
 
