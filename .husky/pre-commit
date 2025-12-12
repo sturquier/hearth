@@ -1,0 +1,5 @@
+echo "🛠️ TS checking files 🛠️";
+npm run type-check
+
+echo "🛠️ Linting files 🛠️";
+npm run lint
