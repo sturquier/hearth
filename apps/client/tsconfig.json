@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "verbatimModuleSyntax": true,
+    "outDir": "./dist",
+    "jsx": "react-jsx"
+  },
+  "include": ["src", ".storybook"]
+}

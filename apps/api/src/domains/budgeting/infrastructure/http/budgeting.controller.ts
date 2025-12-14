@@ -1,0 +1,40 @@
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+
+import { CategoryResponseDto } from '@/api/domains/budgeting/application/dtos/category-response.dto';
+import { CreateCategoryDto } from '@/api/domains/budgeting/application/dtos/create-category.dto';
+import { CreateCategoryUseCase } from '@/api/domains/budgeting/application/use-cases/create-category.uc';
+import { ListCategoriesUseCase } from '@/api/domains/budgeting/application/use-cases/list-categories.uc';
+import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
+import { API_PATH } from '@/api/shared/config/paths';
+
+@ApiTags('Budgeting')
+@Controller()
+export class BudgetingController {
+  constructor(
+    private readonly listCategories: ListCategoriesUseCase,
+    private readonly createCategory: CreateCategoryUseCase,
+  ) {}
+
+  @ApiOperation({ summary: 'Get categories' })
+  @ApiResponse({ status: 200, type: [CategoryResponseDto] })
+  @Get(API_PATH.BUDGET_CATEGORIES)
+  async getCategories(): Promise<CategoryResponseDto[]> {
+    const categories: Category[] = await this.listCategories.execute();
+
+    return categories.map((category) =>
+      CategoryResponseDto.fromDomain(category),
+    );
+  }
+
+  @ApiOperation({ summary: 'Create a new category' })
+  @ApiResponse({ status: 201, type: CategoryResponseDto })
+  @Post(API_PATH.BUDGET_CATEGORIES)
+  async createCategoryApi(
+    @Body() dto: CreateCategoryDto,
+  ): Promise<CategoryResponseDto> {
+    const createdCategory = await this.createCategory.execute(dto);
+
+    return CategoryResponseDto.fromDomain(createdCategory);
+  }
+}

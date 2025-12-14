@@ -2,7 +2,11 @@
 .DS_Store
 
 # Compiled output
+/dist
 /node_modules
 
-# Turbo
-.turbo
+# Tanstack
+.tanstack
+
+# Dotenv
+.env

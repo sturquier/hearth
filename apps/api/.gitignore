@@ -2,7 +2,8 @@
 .DS_Store
 
 # Compiled output
+/dist
 /node_modules
 
-# Turbo
-.turbo
+# Dotenv
+.env
