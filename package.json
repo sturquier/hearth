@@ -8,8 +8,10 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
-    "lint": "eslint \"apps/**/src/**/*.{ts,tsx}\" --fix",
-    "type-check": "tsc --noEmit --pretty false --skipLibCheck",
+    "lint:api": "turbo run lint --filter=hearth-api",
+    "lint:client": "turbo run lint --filter=hearth-client",
+    "type-check:api": "turbo run type-check --filter=hearth-api",
+    "type-check:client": "turbo run type-check --filter=hearth-client",
     "test": "turbo run test",
     "prepare": "husky"
   },
@@ -26,7 +28,7 @@
   },
   "packageManager": "npm@11.7.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12.0"
   },
   "workspaces": [
     "apps/*"

@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "nest start --watch",
     "build": "nest build",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\" --fix",
+    "type-check": "tsc --noEmit --pretty false --skipLibCheck",
     "test": "jest"
   },
   "dependencies": {

@@ -1,5 +1,11 @@
-echo "🛠️ TS checking files 🛠️";
-npm run type-check
+echo "🛠️ [API] TS checking files 🛠️";
+npm run type-check:api
 
-echo "🛠️ Linting files 🛠️";
-npm run lint
+echo "🧹 [API] Linting files 🧹";
+npm run lint:api
+
+echo "🖥️ [CLIENT] TS checking files 🖥️";
+npm run type-check:client
+
+echo "🎨 [CLIENT] Linting files 🎨";
+npm run lint:client
