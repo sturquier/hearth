@@ -12,7 +12,9 @@
     "lint:client": "turbo run lint --filter=hearth-client",
     "type-check:api": "turbo run type-check --filter=hearth-api",
     "type-check:client": "turbo run type-check --filter=hearth-client",
-    "test": "turbo run test",
+    "test:api": "turbo run test --filter=hearth-api",
+    "test:e2e:api": "turbo run test:e2e --filter=hearth-api",
+    "test:client": "turbo run test --filter=hearth-client",
     "prepare": "husky"
   },
   "devDependencies": {

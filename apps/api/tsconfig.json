@@ -5,6 +5,7 @@
     "moduleResolution": "nodenext",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "isolatedModules": true,
     "outDir": "./dist"
   },
   "include": ["src", "test"]
