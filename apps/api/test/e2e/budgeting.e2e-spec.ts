@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import request from 'supertest';
 
 import { AppModule } from '@/api/app.module';
-import { API_PATH } from '@/api/shared/config/paths';
+import { API_PATH } from '@/packages/api-paths';
 
 describe('BudgetingController (e2e)', () => {
   let app: INestApplication;
