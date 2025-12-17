@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" --fix",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\" --fix",
     "type-check": "tsc --noEmit --pretty false --skipLibCheck",
     "test": "vitest run",
     "storybook": "storybook dev",
