@@ -6,7 +6,7 @@ import { CreateCategoryDto } from '@/api/domains/budgeting/application/dtos/crea
 import { CreateCategoryUseCase } from '@/api/domains/budgeting/application/use-cases/create-category.uc';
 import { ListCategoriesUseCase } from '@/api/domains/budgeting/application/use-cases/list-categories.uc';
 import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { API_PATH } from '@/packages/api-paths';
+import { API_PATH } from '@/packages/paths/api-paths';
 
 @ApiTags('Budgeting')
 @Controller()

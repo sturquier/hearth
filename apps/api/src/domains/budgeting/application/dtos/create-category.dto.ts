@@ -1,6 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateCategoryDto {
+import { CreateCategoryContract } from '@/packages/contracts/category.contract';
+
+export class CreateCategoryDto implements CreateCategoryContract {
   @ApiProperty()
   name!: string;
 }
