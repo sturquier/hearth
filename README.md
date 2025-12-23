@@ -1,5 +1,6 @@
 # Hearth
 
-[![CI / CD](https://github.com/sturquier/hearth/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/sturquier/hearth/actions/workflows/main.yml)
+[![CI](https://github.com/sturquier/hearth/actions/workflows/ci.yml/badge.svg)](https://github.com/sturquier/hearth/actions/workflows/ci.yml)
+[![CD](https://github.com/sturquier/hearth/actions/workflows/cd.yml/badge.svg)](https://github.com/sturquier/hearth/actions/workflows/cd.yml)
 
 Built with [Turborepo](https://turborepo.com/), [NestJS](https://nestjs.com/), [Tanstack](https://tanstack.com/)
