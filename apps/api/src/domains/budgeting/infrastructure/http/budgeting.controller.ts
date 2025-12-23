@@ -1,12 +1,12 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
-import { CategoryResponseDto } from '@/api/domains/budgeting/application/dtos/category-response.dto';
-import { CreateCategoryDto } from '@/api/domains/budgeting/application/dtos/create-category.dto';
-import { CreateCategoryUseCase } from '@/api/domains/budgeting/application/use-cases/create-category.uc';
-import { ListCategoriesUseCase } from '@/api/domains/budgeting/application/use-cases/list-categories.uc';
-import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { API_PATH } from '@/packages/paths/api-paths';
+import { CategoryResponseDto } from '@hearth/api/domains/budgeting/application/dtos/category-response.dto';
+import { CreateCategoryDto } from '@hearth/api/domains/budgeting/application/dtos/create-category.dto';
+import { CreateCategoryUseCase } from '@hearth/api/domains/budgeting/application/use-cases/create-category.uc';
+import { ListCategoriesUseCase } from '@hearth/api/domains/budgeting/application/use-cases/list-categories.uc';
+import { Category } from '@hearth/api/domains/budgeting/domain/entities/category.entity';
+import { API_PATH } from '@hearth/shared-paths';
 
 @ApiTags('Budgeting')
 @Controller()

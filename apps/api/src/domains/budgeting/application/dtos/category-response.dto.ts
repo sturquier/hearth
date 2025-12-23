@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { CategoryResponseContract } from '@/packages/contracts/category.contract';
+import { Category } from '@hearth/api/domains/budgeting/domain/entities/category.entity';
+import type { CategoryResponseContract } from '@hearth/shared-contracts';
 
 export class CategoryResponseDto implements CategoryResponseContract {
   @ApiProperty()

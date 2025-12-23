@@ -1,4 +1,4 @@
-import { CategoryId } from '@/api/domains/budgeting/domain/value-objects/category-id.vo';
+import { CategoryId } from '@hearth/api/domains/budgeting/domain/value-objects/category-id.vo';
 
 export class Category {
   constructor(

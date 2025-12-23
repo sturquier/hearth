@@ -1,6 +1,6 @@
-import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { CategoryId } from '@/api/domains/budgeting/domain/value-objects/category-id.vo';
-import { CategoryOrmEntity } from '@/api/domains/budgeting/infrastructure/persistence/orm/category.orm-entity';
+import { Category } from '@hearth/api/domains/budgeting/domain/entities/category.entity';
+import { CategoryId } from '@hearth/api/domains/budgeting/domain/value-objects/category-id.vo';
+import { CategoryOrmEntity } from '@hearth/api/domains/budgeting/infrastructure/persistence/orm/category.orm-entity';
 
 export class CategoryMapper {
   static toDomain(raw: CategoryOrmEntity): Category {

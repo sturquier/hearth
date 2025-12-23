@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 import type { FC } from 'react';
 
-import { Sidebar } from '@/client/components/layout/Sidebar/Sidebar';
-import { Button } from '@/client/components/ui/Button/Button';
+import { Sidebar } from '@hearth/client/components/layout/Sidebar/Sidebar';
+import { Button } from '@hearth/client/components/ui/Button/Button';
 
 export const Header: FC = () => {
   const [isSidebarOpened, setIsSidebarOpen] = useState(false);

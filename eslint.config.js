@@ -51,7 +51,7 @@ export default tseslint.config(
           ],
           pathGroups: [
             {
-              pattern: '@/**',
+              pattern: '@hearth/**',
               group: 'internal',
               position: 'after',
             },

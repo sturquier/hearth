@@ -2,8 +2,8 @@ import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import request from 'supertest';
 
-import { AppModule } from '@/api/app.module';
-import { API_PATH } from '@/packages/paths/api-paths';
+import { AppModule } from '@hearth/api/app.module';
+import { API_PATH } from '@hearth/shared-paths';
 
 describe('BudgetingController (e2e)', () => {
   let app: INestApplication;

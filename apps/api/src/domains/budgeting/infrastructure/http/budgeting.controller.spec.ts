@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { CreateCategoryUseCase } from '@/api/domains/budgeting/application/use-cases/create-category.uc';
-import { ListCategoriesUseCase } from '@/api/domains/budgeting/application/use-cases/list-categories.uc';
-import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { CategoryId } from '@/api/domains/budgeting/domain/value-objects/category-id.vo';
+import { CreateCategoryUseCase } from '@hearth/api/domains/budgeting/application/use-cases/create-category.uc';
+import { ListCategoriesUseCase } from '@hearth/api/domains/budgeting/application/use-cases/list-categories.uc';
+import { Category } from '@hearth/api/domains/budgeting/domain/entities/category.entity';
+import { CategoryId } from '@hearth/api/domains/budgeting/domain/value-objects/category-id.vo';
 
 import { BudgetingController } from './budgeting.controller';
 

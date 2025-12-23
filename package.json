@@ -8,14 +8,20 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
-    "lint:api": "turbo run lint --filter=hearth-api",
-    "lint:client": "turbo run lint --filter=hearth-client",
-    "type-check:api": "turbo run type-check --filter=hearth-api",
-    "type-check:client": "turbo run type-check --filter=hearth-client",
-    "test:api": "turbo run test --filter=hearth-api",
-    "test:e2e:api": "turbo run test:e2e --filter=hearth-api",
-    "test:client": "turbo run test --filter=hearth-client",
+    "lint:api": "turbo run lint --filter=@hearth/api",
+    "lint:client": "turbo run lint --filter=@hearth/client",
+    "lint:packages": "turbo run lint --filter=@hearth/shared-*",
+    "type-check:api": "turbo run type-check --filter=@hearth/api",
+    "type-check:client": "turbo run type-check --filter=@hearth/client",
+    "type-check:packages": "turbo run type-check --filter=@hearth/shared-*",
+    "test:api": "turbo run test --filter=@hearth/api",
+    "test:e2e:api": "turbo run test:e2e --filter=@hearth/api",
+    "test:client": "turbo run test --filter=@hearth/client",
     "prepare": "husky"
+  },
+  "dependencies": {
+    "@hearth/shared-contracts": "workspace:*",
+    "@hearth/shared-paths": "workspace:*"
   },
   "devDependencies": {
     "eslint": "^9.18.0",

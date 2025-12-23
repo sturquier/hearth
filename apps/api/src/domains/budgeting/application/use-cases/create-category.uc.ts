@@ -1,7 +1,7 @@
-import { CreateCategoryDto } from '@/api/domains/budgeting/application/dtos/create-category.dto';
-import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { CategoryRepository } from '@/api/domains/budgeting/domain/repositories/category.repository';
-import { CategoryId } from '@/api/domains/budgeting/domain/value-objects/category-id.vo';
+import { CreateCategoryDto } from '@hearth/api/domains/budgeting/application/dtos/create-category.dto';
+import { Category } from '@hearth/api/domains/budgeting/domain/entities/category.entity';
+import { CategoryRepository } from '@hearth/api/domains/budgeting/domain/repositories/category.repository';
+import { CategoryId } from '@hearth/api/domains/budgeting/domain/value-objects/category-id.vo';
 
 export class CreateCategoryUseCase {
   constructor(private readonly repository: CategoryRepository) {}

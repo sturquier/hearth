@@ -1,14 +1,17 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true,
     "declaration": true,
     "verbatimModuleSyntax": true,
     "outDir": "./dist",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@hearth/client/*": ["./src/*"]
+    }
   },
   "include": ["src", "test", ".storybook", "env.d.ts"]
 }

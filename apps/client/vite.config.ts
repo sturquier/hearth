@@ -1,3 +1,5 @@
+import { URL, fileURLToPath } from 'node:url';
+
 import { devtools } from '@tanstack/devtools-vite';
 import { tanstackRouter } from '@tanstack/router-plugin/vite';
 import viteReact from '@vitejs/plugin-react';
@@ -15,7 +17,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@/client': '/src',
+      '@hearth/client': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 });

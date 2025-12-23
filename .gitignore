@@ -1,8 +1,16 @@
 # OS
 .DS_Store
 
-# Compiled output
-/node_modules
-
-# Turbo
+# Turborepo
 .turbo
+
+# Compiled output
+dist
+node_modules
+tsconfig.tsbuildinfo
+
+# Tanstack
+.tanstack
+
+# Dotenv
+.env

@@ -1,0 +1,19 @@
+{
+  "name": "@hearth/shared-contracts",
+  "type": "commonjs",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"  --fix",
+    "type-check": "tsc --noEmit --pretty false --skipLibCheck"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

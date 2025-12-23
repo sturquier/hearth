@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ES2023",
     "strict": true,
@@ -8,12 +9,6 @@
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/api/*": ["apps/api/src/*"],
-      "@/client/*": ["apps/client/src/*"],
-      "@/packages/*": ["packages/*"]
-    }
+    "incremental": true
   }
 }

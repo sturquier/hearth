@@ -3,7 +3,7 @@ import { Home, X } from 'lucide-react';
 
 import type { FC } from 'react';
 
-import { Button } from '@/client/components/ui/Button/Button';
+import { Button } from '@hearth/client/components/ui/Button/Button';
 
 import type { ISidebar } from './Sidebar.interface';
 

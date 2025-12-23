@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-import { Button } from '@/client/components/ui/Button/Button';
-import { useFormContext } from '@/client/hooks/useFormContext';
+import { Button } from '@hearth/client/components/ui/Button/Button';
+import { useFormContext } from '@hearth/client/hooks/useFormContext';
 
 import type { IFormSubmit } from './FormSubmit.interface';
 

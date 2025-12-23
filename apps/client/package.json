@@ -1,5 +1,5 @@
 {
-  "name": "hearth-client",
+  "name": "@hearth/client",
   "type": "module",
   "private": true,
   "scripts": {

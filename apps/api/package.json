@@ -1,5 +1,5 @@
 {
-  "name": "hearth-api",
+  "name": "@hearth/api",
   "type": "commonjs",
   "private": true,
   "scripts": {

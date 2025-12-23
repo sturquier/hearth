@@ -7,7 +7,7 @@ export default {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
   moduleNameMapper: {
-    '^@/api/(.*)$': '<rootDir>/src/$1',
-    '^@/packages/(.*)$': '<rootDir>/../../packages/$1',
+    '^@hearth/api/(.*)$': '<rootDir>/src/$1',
+    '^@hearth/shared-(.*)$': '<rootDir>/../../packages/shared-$1/src',
   },
 };

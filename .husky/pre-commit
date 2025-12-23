@@ -1,11 +1,17 @@
+echo "🧱 [PACKAGES] TS checking files 🧱"
+npm run type-check:packages || exit 1
+
+echo "📦 [PACKAGES] Linting files 📦";
+npm run lint:packages || exit 1
+
 echo "🛠️ [API] TS checking files 🛠️";
-npm run type-check:api
+npm run type-check:api || exit 1
 
 echo "🧹 [API] Linting files 🧹";
-npm run lint:api
+npm run lint:api || exit 1
 
 echo "🖥️ [CLIENT] TS checking files 🖥️";
-npm run type-check:client
+npm run type-check:client || exit 1
 
 echo "🎨 [CLIENT] Linting files 🎨";
-npm run lint:client
+npm run lint:client || exit 1

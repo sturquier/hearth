@@ -1,5 +1,5 @@
-import { Category } from '@/api/domains/budgeting/domain/entities/category.entity';
-import { CategoryRepository } from '@/api/domains/budgeting/domain/repositories/category.repository';
+import { Category } from '@hearth/api/domains/budgeting/domain/entities/category.entity';
+import { CategoryRepository } from '@hearth/api/domains/budgeting/domain/repositories/category.repository';
 
 export class ListCategoriesUseCase {
   constructor(private readonly repository: CategoryRepository) {}

@@ -1,6 +1,6 @@
 import { createFormHook } from '@tanstack/react-form';
 
-import { FormSubmit } from '@/client/components/form/FormSubmit/FormSubmit';
+import { FormSubmit } from '@hearth/client/components/form/FormSubmit/FormSubmit';
 
 import { fieldContext, formContext } from './useFormContext';
 
