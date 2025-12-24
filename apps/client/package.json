@@ -5,14 +5,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\" --fix",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.ts\" --fix",
     "type-check": "tsc --noEmit --pretty false --skipLibCheck",
-    "test": "vitest run",
+    "test": "vitest --project=unit run",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build",
+    "test:storybook": "vitest --project=storybook run"
   },
   "dependencies": {
-    "@storybook/react-vite": "^10.1.8",
+    "@storybook/react-vite": "^10.1.10",
     "@tanstack/match-sorter-utils": "^8.19.4",
     "@tanstack/react-devtools": "^0.7.0",
     "@tanstack/react-form": "^1.0.0",
@@ -25,10 +26,12 @@
     "lucide-react": "^0.545.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "storybook": "^10.1.8",
+    "storybook": "^10.1.10",
     "zod": "^4.1.11"
   },
   "devDependencies": {
+    "@rollup/pluginutils": "^5.3.0",
+    "@storybook/addon-vitest": "^10.1.10",
     "@tanstack/devtools-vite": "^0.3.11",
     "@tanstack/eslint-config": "^0.3.0",
     "@testing-library/dom": "^10.4.0",
@@ -37,8 +40,17 @@
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/browser": "^4.0.16",
+    "@vitest/browser-playwright": "^4.0.16",
+    "@vitest/coverage-v8": "^4.0.16",
+    "empathic": "^2.0.0",
+    "eslint-plugin-storybook": "10.1.10",
     "jsdom": "^27.0.0",
+    "playwright": "^1.57.0",
+    "react-docgen": "^8.0.2",
+    "ts-dedent": "^2.2.0",
     "vite": "^7.1.7",
-    "vitest": "^3.0.5"
+    "vitest": "^4.0.16",
+    "wsl-utils": "^0.1.0"
   }
 }

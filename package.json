@@ -18,6 +18,7 @@
     "test:api": "turbo run test --filter=@hearth/api",
     "test:e2e:api": "turbo run test:e2e --filter=@hearth/api",
     "test:client": "turbo run test --filter=@hearth/client",
+    "test:storybook:client": "turbo run test:storybook --filter=@hearth/client",
     "prepare": "husky"
   },
   "dependencies": {

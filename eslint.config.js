@@ -1,8 +1,8 @@
-// @ts-check
 import eslint from '@eslint/js';
 import { tanstackConfig } from '@tanstack/eslint-config';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import storybook from 'eslint-plugin-storybook';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -14,6 +14,7 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   ...tanstackConfig,
   eslintPluginPrettierRecommended,
+  storybook.configs['flat/recommended'],
   {
     plugins: {
       importPlugin: eslintPluginImport,
@@ -27,7 +28,11 @@ export default tseslint.config(
       },
       sourceType: 'commonjs',
       parserOptions: {
-        project: ['./tsconfig.base.json'],
+        project: [
+          './tsconfig.base.json',
+          './apps/**/tsconfig.json',
+          './packages/**/tsconfig.json',
+        ],
         tsconfigRootDir: import.meta.dirname,
       },
     },
