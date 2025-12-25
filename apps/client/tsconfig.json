@@ -13,5 +13,5 @@
       "@hearth/client/*": ["./src/*"]
     }
   },
-  "include": ["src", "test", ".storybook", "env.d.ts"]
+  "include": ["src", "test", "env.d.ts"]
 }

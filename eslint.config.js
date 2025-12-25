@@ -38,6 +38,15 @@ export default tseslint.config(
     },
   },
   {
+    files: ['apps/client/.storybook/**/*.{ts,tsx}'],
+    languageOptions: {
+      parserOptions: {
+        project: ['./apps/client/.storybook/tsconfig.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
     rules: {
       '@typescript-eslint/array-type': 'off',
       '@typescript-eslint/consistent-type-imports': 'off',

@@ -7,6 +7,7 @@ import {
   TanstackQueryProvider,
   getContext,
 } from './providers/TanstackQueryProvider';
+import { ThemeProvider } from './providers/ThemeProvider';
 
 declare module '@tanstack/react-router' {
   interface Register {
@@ -21,7 +22,9 @@ if (rootElement && !rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <TanstackQueryProvider queryClient={getContext()}>
-        <RouterProvider router={router} />
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </TanstackQueryProvider>
     </StrictMode>,
   );

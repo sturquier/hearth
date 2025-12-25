@@ -4,5 +4,5 @@ export interface IButton {
   children: ReactNode;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-  onClick?: () => void;
+  onClickCallback?: () => void;
 }

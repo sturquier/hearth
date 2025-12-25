@@ -29,7 +29,7 @@ export const Submit: Story = {
   args: {
     children: 'Submit Button',
     type: 'submit',
-    onClick: fn(),
+    onClickCallback: fn(),
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement);
@@ -37,7 +37,7 @@ export const Submit: Story = {
 
     await userEvent.click(button);
 
-    await expect(args.onClick).toHaveBeenCalledTimes(1);
+    await expect(args.onClickCallback).toHaveBeenCalledTimes(1);
   },
 };
 

@@ -13,6 +13,7 @@ export const setupSwagger = (app: INestApplication): void => {
     SwaggerModule.createDocument(app, config);
 
   SwaggerModule.setup('api', app, documentFactory, {
+    customSiteTitle: 'Hearth API',
     jsonDocumentUrl: 'api/json',
   });
 };

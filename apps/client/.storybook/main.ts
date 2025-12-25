@@ -1,20 +1,30 @@
-import { dirname } from 'node:path';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-vite';
 
-const getAbsolutePath = (value: string): string => {
+const getAbsolutePackagePath = (value: string): string => {
   return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
 };
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
-  addons: [getAbsolutePath('@storybook/addon-vitest')],
+  addons: [getAbsolutePackagePath('@storybook/addon-vitest')],
   framework: {
-    name: getAbsolutePath('@storybook/react-vite'),
+    name: getAbsolutePackagePath('@storybook/react-vite'),
     options: {},
   },
   viteFinal(inlineConfig) {
+    inlineConfig.resolve ||= {};
+    inlineConfig.resolve.alias ||= {};
+
+    Object.assign(inlineConfig.resolve.alias, {
+      '@hearth/client': resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        '../src',
+      ),
+    });
+
     return inlineConfig;
   },
 };

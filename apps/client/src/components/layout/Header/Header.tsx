@@ -1,28 +1,40 @@
+import { ActionIcon, AppShellHeader, Burger, Group } from '@mantine/core';
 import { Link } from '@tanstack/react-router';
-import { Menu } from 'lucide-react';
-import { useState } from 'react';
+import { User } from 'lucide-react';
 
 import type { FC } from 'react';
 
-import { Sidebar } from '@hearth/client/components/layout/Sidebar/Sidebar';
-import { Button } from '@hearth/client/components/ui/Button/Button';
+import { PATHS } from '@hearth/client/constants/paths';
 
-export const Header: FC = () => {
-  const [isSidebarOpened, setIsSidebarOpen] = useState(false);
+import type { IHeader } from './Header.interface';
 
+export const Header: FC<IHeader> = ({
+  mobileOpened,
+  desktopOpened,
+  onToggleMobileCallback,
+  onToggleDesktopCallback,
+}) => {
   return (
-    <>
-      <header>
-        <Button onClick={() => setIsSidebarOpen(true)}>
-          <Menu size={24} />
-        </Button>
-
-        <Link to="/">
-          <h1>Home</h1>
-        </Link>
-
-        {isSidebarOpened ? <Sidebar toggleIsOpened={setIsSidebarOpen} /> : null}
-      </header>
-    </>
+    <AppShellHeader>
+      <Group h="100%" px="md" justify="space-between">
+        <Group>
+          <Burger
+            opened={mobileOpened}
+            onClick={onToggleMobileCallback}
+            hiddenFrom="sm"
+            size="sm"
+          />
+          <Burger
+            opened={desktopOpened}
+            onClick={onToggleDesktopCallback}
+            visibleFrom="sm"
+            size="sm"
+          />
+        </Group>
+        <ActionIcon component={Link} to={PATHS.PROFILE} variant="subtle">
+          <User size={24} />
+        </ActionIcon>
+      </Group>
+    </AppShellHeader>
   );
 };

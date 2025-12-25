@@ -1,14 +1,15 @@
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
 
-import { Header } from '@hearth/client/components/layout/Header/Header';
 import { Devtools } from '@hearth/client/config/devtools';
+import { MainLayout } from '@hearth/client/layouts/MainLayout';
 import type { RouterContext } from '@hearth/client/providers/TanstackQueryProvider';
 
 export const Route = createRootRouteWithContext<RouterContext>()({
   component: () => (
     <>
-      <Header />
-      <Outlet />
+      <MainLayout>
+        <Outlet />
+      </MainLayout>
       <Devtools />
     </>
   ),
