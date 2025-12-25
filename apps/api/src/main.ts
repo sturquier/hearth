@@ -7,6 +7,8 @@ import { setupSwagger } from './shared/infrastructure/api/api.config';
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
 
+  app.enableCors();
+
   setupSwagger(app);
 
   app.useLogger(app.get(Logger));

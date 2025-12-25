@@ -20,4 +20,13 @@ export default defineConfig({
       '@hearth/client': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  optimizeDeps: {
+    include: ['@hearth/shared-contracts', '@hearth/shared-paths'],
+  },
+
+  build: {
+    commonjsOptions: {
+      include: [/node_modules/, /shared-contracts/, /shared-paths/],
+    },
+  },
 });

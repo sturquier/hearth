@@ -23,6 +23,14 @@ export default defineConfig({
     },
     projects: [
       {
+        resolve: {
+          alias: {
+            '@hearth/client/test': fileURLToPath(
+              new URL('./test', import.meta.url),
+            ),
+            '@hearth/client': fileURLToPath(new URL('./src', import.meta.url)),
+          },
+        },
         test: {
           name: 'unit',
           include: ['src/**/*.{test,spec}.{ts,tsx}'],
