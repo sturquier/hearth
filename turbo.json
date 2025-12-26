@@ -18,10 +18,12 @@
       "dependsOn": ["build:package"]
     },
     "lint": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["build:package"]
     },
     "type-check": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["build:package"]
     },
     "test": {
       "cache": false,
