@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "tsc --watch",
-    "build:package": "tsc",
+    "build:package": "tsc -p tsconfig.build.json",
     "lint": "eslint \"src/**/*.ts\"  --fix",
     "type-check": "tsc --noEmit --pretty false --skipLibCheck"
   },
