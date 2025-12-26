@@ -2,14 +2,20 @@
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
   "tasks": {
+    "build:package": {
+      "cache": false,
+      "outputs": ["dist/**"]
+    },
+    "build:app": {
+      "cache": false,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "dependsOn": ["build:package"],
+      "outputs": ["dist/**"]
+    },
     "dev": {
       "cache": false,
-      "persistent": true
-    },
-    "build": {
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "persistent": true,
+      "dependsOn": ["build:package"]
     },
     "lint": {
       "cache": false
@@ -18,16 +24,16 @@
       "cache": false
     },
     "test": {
-      "dependsOn": ["build"],
-      "cache": false
+      "cache": false,
+      "dependsOn": ["build:package"]
     },
     "test:e2e": {
-      "dependsOn": ["build"],
-      "cache": false
+      "cache": false,
+      "dependsOn": ["build:package"]
     },
     "test:storybook": {
-      "dependsOn": ["build"],
-      "cache": false
+      "cache": false,
+      "dependsOn": ["build:package"]
     }
   }
 }

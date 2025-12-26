@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nest start --watch",
-    "build": "nest build",
+    "build:app": "nest build",
     "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\" --fix",
     "type-check": "tsc --noEmit --pretty false --skipLibCheck",
     "test": "jest",

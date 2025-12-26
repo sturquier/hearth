@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:app": "vite build",
     "lint": "eslint \"src/**/*.{ts,tsx}\" \"test/**/*.ts\" --fix",
     "type-check": "tsc --noEmit --pretty false --skipLibCheck",
     "test": "vitest --project=unit run",
