@@ -9,33 +9,32 @@
     "build:app": {
       "cache": false,
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "dependsOn": ["build:package"],
+      "dependsOn": ["^build:package"],
       "outputs": ["dist/**"]
     },
     "dev": {
       "cache": false,
       "persistent": true,
-      "dependsOn": ["build:package"]
+      "dependsOn": ["^build:package"]
     },
     "lint": {
-      "cache": false,
-      "dependsOn": ["build:package"]
+      "cache": false
     },
     "type-check": {
       "cache": false,
-      "dependsOn": ["build:package"]
+      "dependsOn": ["^build:package"]
     },
     "test": {
       "cache": false,
-      "dependsOn": ["build:package"]
+      "dependsOn": ["^build:package"]
     },
     "test:e2e": {
       "cache": false,
-      "dependsOn": ["build:package"]
+      "dependsOn": ["^build:package"]
     },
     "test:storybook": {
       "cache": false,
-      "dependsOn": ["build:package"]
+      "dependsOn": ["^build:package"]
     }
   }
 }
