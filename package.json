@@ -24,10 +24,6 @@
     "test:storybook:client": "turbo run test:storybook --filter=@hearth/client...",
     "prepare": "husky"
   },
-  "dependencies": {
-    "@hearth/shared-contracts": "workspace:*",
-    "@hearth/shared-paths": "workspace:*"
-  },
   "devDependencies": {
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
