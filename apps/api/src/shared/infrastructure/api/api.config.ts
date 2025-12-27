@@ -15,5 +15,6 @@ export const setupSwagger = (app: INestApplication): void => {
   SwaggerModule.setup('api', app, documentFactory, {
     customSiteTitle: 'Hearth API',
     jsonDocumentUrl: 'api/json',
+    customfavIcon: 'favicon.ico',
   });
 };
